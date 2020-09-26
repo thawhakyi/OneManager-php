@@ -273,7 +273,7 @@ function post2url($url, $data)
 function ReorganizeDate($arr)
 {
     $str = '';
-    ksort($arr);
+    //ksort($arr);
     foreach ($arr as $k1 => $v1) {
         $str .= '&' . $k1 . '=' . $v1;
     }
@@ -315,8 +315,8 @@ function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId
         $tmp_env[$key1] = $value1;
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-    //$tmp_env['Region'] = $Region;
-    ksort($tmp_env);
+    //ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $i = 0;
     foreach ($tmp_env as $key1 => $value1) {
@@ -357,8 +357,8 @@ function SetbaseConfig($Envs, $function_name, $Region, $Namespace, $SecretId, $S
         $tmp_env[$key1] = $value1;
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-    //$tmp_env['Region'] = $Region;
-    ksort($tmp_env);
+    //ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $i = 0;
     foreach ($tmp_env as $key1 => $value1) {
