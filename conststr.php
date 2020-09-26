@@ -268,9 +268,9 @@ $constStr = [
         'ko-kr' => '이 디스크를 삭제',
         'fa' => 'پاک کردن این دیسک',
     ],
-    'AddDisk' => [
-        'en-us' => 'Add Onedrive Disk',
-        'zh-cn' => '添加Onedrive盘',
+    'AddDisk_MS365' => [
+        'en-us' => 'Add Disk: Microsoft Onedrive or Sharepoint',
+        'zh-cn' => '添加Onedrive或Sharepoint盘',
         'ja' => 'Onedriveを追加',
         'ko-kr' => 'Onedrive 추가',
         'fa' => 'اضافه کردن دیسک Onedrive',
@@ -694,7 +694,7 @@ $constStr = [
     ],
     'UseShareLink' => [
         'en-us' => 'Share a folder in Onedrive (enable EDIT for everyone), input the link url below.',
-        'zh-cn' => '对一个Onedrive文件夹共享，允许所有人编辑，然后将共享链接填在下方',
+        'zh-cn' => '（只国际版有效）将一个Onedrive文件夹共享，允许所有人编辑，然后将共享链接填在下方',
     ],
     'CustomIdSecret' => [
         'en-us' => 'Use custom client id & secret instead of OneManager default',
