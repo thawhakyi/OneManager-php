@@ -294,7 +294,8 @@ function updateEnvironment($Envs, $SecretId, $SecretKey)
         $tmp_env[$key1] = $value1;
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-    ksort($tmp_env);
+    //ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $tmp['Environment']['Variables'] = $tmp_env;
     $data = json_encode($tmp);
@@ -310,7 +311,8 @@ function SetbaseConfig($Envs, $SecretId, $SecretKey)
         $tmp_env[$key1] = $value1;
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-    ksort($tmp_env);
+    //ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $tmp['Timeout'] = 30;
     $tmp['Description'] = 'Onedrive index and manager in Baidu CFC.';
