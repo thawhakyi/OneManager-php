@@ -349,7 +349,8 @@ function updateEnvironment($Envs, $HW_urn, $HW_key, $HW_secret)
         $tmp_env[$key1] = $value1;
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-    ksort($tmp_env);
+    //ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $tmpdata['handler'] = 'index.handler';
     $tmpdata['memory_size'] = $contextUserData->getMemorySize()+1-1;
@@ -369,7 +370,8 @@ function SetbaseConfig($Envs, $HW_urn, $HW_key, $HW_secret)
         $tmp_env[$key1] = $value1;
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-    ksort($tmp_env);
+    //ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $tmpdata['handler'] = 'index.handler';
     $tmpdata['memory_size'] = 128;
