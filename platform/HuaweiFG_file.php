@@ -136,7 +136,7 @@ function setConfig($arr, $disktag = '')
         else $envs['disktag'] = '';
     }
     $envs = array_filter($envs, 'array_value_isnot_null');
-    ksort($envs);
+    //ksort($envs);
     $response = updateEnvironment($envs, getConfig('HW_urn'), getConfig('HW_key'), getConfig('HW_secret'));
     return $response;
 }
@@ -384,6 +384,7 @@ function updateEnvironment($Envs, $HW_urn, $HW_key, $HW_secret)
     // 将配置写入
     $prestr = '<?php $configs = \'' . PHP_EOL;
     $aftstr = PHP_EOL . '\';';
+    $Envs = SortConfig($Envs);
     file_put_contents($outPath . 'config.php', $prestr . json_encode($Envs, JSON_PRETTY_PRINT) . $aftstr);
 
     // 将目录中文件打包成zip
@@ -409,7 +410,7 @@ function SetbaseConfig($Envs, $HW_urn, $HW_key, $HW_secret)
             $tmp_env[$key1] = $value1;
         }
         $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-        ksort($tmp_env);
+        //ksort($tmp_env);
         $envs = $tmp_env;
     }
 
@@ -448,7 +449,7 @@ function SetbaseConfig($Envs, $HW_urn, $HW_key, $HW_secret)
         $tmp_env[$k] = $v;
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null');
-    ksort($tmp_env);
+    //ksort($tmp_env);
     $response = updateEnvironment($tmp_env, $HW_urn, $HW_key, $HW_secret);
     return $response;
 }
