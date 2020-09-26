@@ -38,14 +38,10 @@ function GetPathSetting($event, $context)
     $_SERVER['region'] = $context['region'];
     $_SERVER['service_name'] = $context['service']['name'];
     $_SERVER['function_name'] = $context['function']['name'];
-    $path = $event['path'];
-    $tmp = $event['requestURI'];
-    if (strpos($tmp, '?')) $tmp = substr($tmp, 0, strpos($tmp, '?'));
-    if ($path=='/'||$path=='') {
-        $_SERVER['base_path'] = $tmp;
-    } else {
-        $_SERVER['base_path'] = substr($tmp, 0, -strlen($path)+1);
-    }
+
+        $_SERVER['base_path'] = '/';
+        $path = $event['path'];
+        //$path = spurlencode($path, '/');
 
     if (substr($path,-1)=='/') $path=substr($path,0,-1);
     $_SERVER['is_guestup_path'] = is_guestup_path($path);
@@ -314,6 +310,7 @@ function updateEnvironment($Envs, $accountId, $region, $service_name, $function_
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
     ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $tmpdata['environmentVariables'] = $tmp_env;
     return FCAPI2016($config, 'PUT', json_encode($tmpdata));
@@ -337,6 +334,7 @@ function SetbaseConfig($Envs, $accountId, $region, $service_name, $function_name
     }
     $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
     ksort($tmp_env);
+    $tmp_env = SortConfig($tmp_env);
 
     $tmpdata['description'] = 'Onedrive index and manager in Aliyun FC.';
     $tmpdata['memorySize'] = 128;
