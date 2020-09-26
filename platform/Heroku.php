@@ -233,6 +233,7 @@ function getHerokuConfig($function_name, $apikey)
 
 function setHerokuConfig($env, $function_name, $apikey)
 {
+    $envs = SortConfig($envs);
     $data = json_encode($env);
     return HerokuAPI('PATCH', 'https://api.heroku.com/apps/' . $function_name . '/config-vars', $data, $apikey);
 }
