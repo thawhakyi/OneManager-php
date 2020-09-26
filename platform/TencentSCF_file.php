@@ -121,7 +121,7 @@ function setConfig($arr, $disktag = '')
         else $envs['disktag'] = '';
     }
     $envs = array_filter($envs, 'array_value_isnot_null');
-    ksort($envs);
+    //ksort($envs);
     $response = updateEnvironment($envs, $_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], getConfig('SecretId'), getConfig('SecretKey'));
     WaitSCFStat($_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], getConfig('SecretId'), getConfig('SecretKey'));
     return $response;
@@ -285,7 +285,7 @@ function post2url($url, $data)
 function ReorganizeDate($arr)
 {
     $str = '';
-    ksort($arr);
+    //ksort($arr);
     foreach ($arr as $k1 => $v1) {
         $str .= '&' . $k1 . '=' . $v1;
     }
@@ -374,6 +374,7 @@ function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId
     // 将配置写入
     $prestr = '<?php $configs = \'' . PHP_EOL;
     $aftstr = PHP_EOL . '\';';
+    $Envs = SortConfig($Envs);
     file_put_contents($outPath . 'config.php', $prestr . json_encode($Envs, JSON_PRETTY_PRINT) . $aftstr);
 
     // 将目录中文件打包成zip
@@ -404,7 +405,7 @@ function SetbaseConfig($Envs, $function_name, $Region, $Namespace, $SecretId, $S
             $tmp_env[$key1] = $value1;
         }
         $tmp_env = array_filter($tmp_env, 'array_value_isnot_null'); // remove null. 清除空值
-        ksort($tmp_env);
+        //ksort($tmp_env);
     }
 
     $i = 0;
@@ -451,7 +452,7 @@ function SetbaseConfig($Envs, $function_name, $Region, $Namespace, $SecretId, $S
         $envs[$k] = $v;
     }
     $envs = array_filter($envs, 'array_value_isnot_null');
-    ksort($envs);
+    //ksort($envs);
     $response = updateEnvironment($envs, $function_name, $Region, $Namespace, $SecretId, $SecretKey);
     return $response;
 }
