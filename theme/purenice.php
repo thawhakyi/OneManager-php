@@ -37,8 +37,8 @@
         .more-disk a{display:block;float:left;width:30%;height:38px;text-align:center;font-weight: bold;font-size: 18px;line-height:38px;color:#A6AAB4; }
         .more-disk a:hover, .more-disk a[now]{ color: #3B414B;border-bottom:2px solid #FF7D00;}
         .list-table{width:100%;border-spacing:0;margin-bottom:20px;}
-        .list-table tr{display:block;margin:10px 10px;width:96%;float:left;background:#ffffff;box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.06);border-radius: 6px;}
-        .list-table tr[data-to]:hover{background:#10C971;color:white;}
+        .list-table tr{display:block;margin:10px 10px;width:96%;float:left;background:#dedede26;box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.06);border-radius: 6px;}
+        .list-table tr[data-to]:hover{background:#5c73f1;color:white;}
         .list-table tr[data-to]:hover a{color:white}
         .list-table td,.list-table th{display:block;float:left;line-height:60px;text-align:left;}
         .list-table td button,.list-table th button{cursor:pointer;color:#ffffff;height:30px;background:#FF7D00;padding:0 20px;border-width:0;border-radius:6px;box-shadow: 0px 4px 12px rgba(255, 125, 0, 0.5);}
@@ -52,7 +52,7 @@
         .list-table .size,.list-table .updated_at{text-align:right}
         .mask{position:absolute;left:0px;top:0px;width:100%;background-color:#000;filter:alpha(opacity=50);opacity:0.5;z-index:2;}
 <?php if ($_SERVER['admin']) { ?>
-        .operate{display:inline-table;margin:0;margin-right:5px;list-style:none;float:left;}
+        .operate{display:inline-table;margin:0;margin-right:20px;list-style:none;float:left;}
         .operate ul{position:absolute;display:none;background:#FF7D00;border:0;border-radius:5px;margin:0;padding:0 7px;color:#205D67;z-index:1;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
         .operate:hover ul{position:absolute;display:inline-table;}
         .operate ul li{list-style:none;display:block;line-height:40px;}
@@ -72,7 +72,7 @@
         .update_notice{position:absolute;color:#A6AAB4;left:10%;margin-top:10px;}
         .upload_style{height:60px;width:96%;margin:10px;background:#ffffff;box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.06);border-radius: 6px;}
         .upload_style input[type="file"]{display:block;color:#A6AAB4;float:left;height:38px;margin:20px 0 0 20px;outline:none;font-size:14px;text-align:center;}
-        .upload_style input[type="button"]{display:block;color:#fff;float:right;height:60px;width:160px;outline:none;font-size:16px;background:#613EEA;border-radius:6px;border:0;}
+        .upload_style input[type="button"]{display:block;color:#fff;float:right;height:50px;width:160px;outline:none;font-size:16px;background:#5c73f1;border-radius:6px;border:0;}
         .upload_style .list-table tr td{line-height:30px;margin:10px 20px;}
         .upload_style .list-table tr td button{margin-left:10px;}
         @media only screen and (max-width:480px){
@@ -88,7 +88,7 @@
             .list-table td.size,.list-table th.size{width:30%;text-align:left;}
             .list-table td.file ion-icon{float:left;margin-top:13px;margin-right:5px;}
             .upload_style input[type="file"]{display:block;color:#A6AAB4;float:left;height:38px;margin:18px 0 0 10px;outline:none;font-size:14px;text-align:center;width:70%;}
-            .upload_style input[type="button"]{display:block;color:#fff;float:right;height:60px;width:25%;outline:none;font-size:16px;background:#613EEA;border-radius:6px;border:0;}
+            .upload_style input[type="button"]{display:block;color:#fff;float:right;height:50px;width:25%;outline:none;font-size:16px;background:#5c73f1;border-radius:6px;border:0;}
         }
         
     </style>
