@@ -22,7 +22,7 @@
         ion-icon{font-size:15px;vertical-align:middle;}
         .changelanguage{display:block;height:30px;line-height:30px;float:right;margin-right:10%;margin-top:5px;}
         .title{text-align:center;margin-top:1rem;letter-spacing:2px;margin-bottom:2rem;}
-        .title a{color:#171D33;line-height:42px;font-size:32px;text-decoration:none}
+        .title a{color:#463c6a;line-height:42px;font-size:32px;text-decoration:none;text-transform:uppercase}
         .list-wrapper{width:80%;margin:0 auto;position:relative;}
         .list-container{position:relative;}
         .list-header-container{position:relative;width:100%;}
@@ -83,7 +83,7 @@
             .list-table td, .list-table th{white-space:nowrap;overflow:auto;line-height:40px;}
             .list-table td.file,.list-table th.file{padding-left: 10px;width: 96%;}
             .size, .updated_at{display:none}
-            .changelanguage{color:#fff;}
+            .changelanguage{color:#463c6a;}
             .list-table td.updated_at,.list-table th.updated_at{width:50%;text-align:left;margin-left:10px;}
             .list-table td.size,.list-table th.size{width:30%;text-align:left;}
             .list-table td.file ion-icon{float:left;margin-top:13px;margin-right:5px;}
