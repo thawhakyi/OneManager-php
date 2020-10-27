@@ -7,12 +7,12 @@
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width,initial-scale=1">
-    <meta name="keywords" content="<?php echo $n_path;?>,<?php if ($p_path!='') echo $p_path.','; echo $_SERVER['sitename'];?>,OneManager,auth_by_逸笙">
+    <meta name="keywords" content="<?php echo $n_path;?>,<?php if ($p_path!='') echo $p_path.','; echo $_SERVER['sitename'];?>,OneManager">
     <link rel="icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <style type="text/css">
         body{margin:0;padding:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1em;color:#000;background-color:#F9FAFB;}
-        .topbar{width:100%;height:40px;background-color:#463C6A;}
+        .topbar{width:100%;height:40px;background-color:#c6ce1b;}
         .topbar .login{display:block;line-height:40px;color:#ffffff;margin-left:10%;float:left;}
         .topbar .login ion-icon{display:block;height:40px;line-height:40px;margin-right:5px;float:left;}
         .topbar .operate{display:block;line-height:40px;color:#ffffff;margin-left:10%;float:left;}
@@ -53,7 +53,7 @@
         .mask{position:absolute;left:0px;top:0px;width:100%;background-color:#000;filter:alpha(opacity=50);opacity:0.5;z-index:2;}
 <?php if ($_SERVER['admin']) { ?>
         .operate{display:inline-table;margin:0;margin-right:5px;list-style:none;float:left;}
-        .operate ul{position:absolute;display:none;background:#fffaaa;border:0;border-radius:5px;margin:0;padding:0 7px;color:#205D67;z-index:1;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+        .operate ul{position:absolute;display:none;background:#FF7D00;border:0;border-radius:5px;margin:0;padding:0 7px;color:#205D67;z-index:1;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
         .operate:hover ul{position:absolute;display:inline-table;}
         .operate ul li{list-style:none;display:block;line-height:40px;}
         .list-table tr[data-to]:hover .operate ul li a{color:black}
